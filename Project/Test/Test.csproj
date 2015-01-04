@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD287D84-1EEA-4B25-9050-5C29818844BC}</ProjectGuid>
+    <ProjectGuid>{700557AF-2F0F-4360-B22B-958D56A2F263}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Test</RootNamespace>
@@ -34,23 +34,24 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Codeer.Friendly">
-      <HintPath>..\Project\packages\Codeer.Friendly.2.4.0\lib\net40\Codeer.Friendly.dll</HintPath>
+      <HintPath>..\packages\Codeer.Friendly.2.4.0\lib\net40\Codeer.Friendly.dll</HintPath>
     </Reference>
     <Reference Include="Codeer.Friendly.Dynamic">
-      <HintPath>..\Project\packages\Codeer.Friendly.2.4.0\lib\net40\Codeer.Friendly.Dynamic.dll</HintPath>
+      <HintPath>..\packages\Codeer.Friendly.2.4.0\lib\net40\Codeer.Friendly.Dynamic.dll</HintPath>
     </Reference>
     <Reference Include="Codeer.Friendly.Windows">
-      <HintPath>..\Project\packages\Codeer.Friendly.Windows.2.4.3\lib\net20\Codeer.Friendly.Windows.dll</HintPath>
+      <HintPath>..\packages\Codeer.Friendly.Windows.2.4.3\lib\net20\Codeer.Friendly.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Codeer.Friendly.Windows.Grasp">
-      <HintPath>..\Project\packages\Codeer.Friendly.Windows.Grasp.2.4.2\lib\net20\Codeer.Friendly.Windows.Grasp.dll</HintPath>
+      <HintPath>..\packages\Codeer.Friendly.Windows.Grasp.2.4.2\lib\net20\Codeer.Friendly.Windows.Grasp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Ong.Friendly.FormsStandardControls">
-      <HintPath>..\Project\packages\Ong.Friendly.FormsStandardControls.2.2.2\lib\net20\Ong.Friendly.FormsStandardControls.dll</HintPath>
+      <HintPath>..\packages\Ong.Friendly.FormsStandardControls.2.2.2\lib\net20\Ong.Friendly.FormsStandardControls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -75,13 +76,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Project\FormsTarget\FormsTarget.csproj">
+    <ProjectReference Include="..\FormsTarget\FormsTarget.csproj">
       <Project>{324ba700-9dfc-4dff-82ee-7a083fec0123}</Project>
       <Name>FormsTarget</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
